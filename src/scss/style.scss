@@ -1,17 +1,14 @@
-$bgColor: #24292e;
-$text: #fff;
+@import url(./normalize.css);
+@import url(./fonts.css);
+@import url(./btn.scss);
+@import url(./variables.scss);
+@import url(./side-control.scss);
+@import url(./side-header.scss);
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+html{
+  box-sizing: border-box;
 }
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+*, *::after, *::before {
+  box-sizing: inherit;
 }

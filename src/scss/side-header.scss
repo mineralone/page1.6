@@ -1,0 +1,16 @@
+.side-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+
+    .side-header__logo {
+        margin-left: 16px;
+    }
+    .side-header__search {
+        margin-left: auto;
+    }
+
+}
+
