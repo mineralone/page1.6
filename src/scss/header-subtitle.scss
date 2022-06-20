@@ -1,0 +1,28 @@
+.header-subtitle {
+    width: 100%;
+    min-height: 56px;
+    background: linear-gradient(90deg, $colorGray 0%, $colorWhite 98.61%);
+    border-top: 1px solid $borderAqua;
+    display: flex;
+    align-items: center;
+
+    .header-subtitle__text {
+        font-family: $fontRegular;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        color: $textGray;
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header-subtitle {
+
+        .header-subtitle__text {
+            padding: 0 36px;
+        }
+
+    }
+}

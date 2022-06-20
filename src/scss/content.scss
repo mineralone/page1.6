@@ -1,0 +1,44 @@
+.content {
+    filter: opacity(1);
+    transition-duration: 0.7s;
+    transition-property: filter;
+    background-color: $colorGray;
+
+    .content__header {
+        min-height: 88px;
+    }
+
+    .content__nav {
+        margin: 0 16px;
+    }
+
+}
+
+.content--blur {
+    filter: opacity(0.2);
+    height: 750px;
+    min-height: 100vh;
+    overflow-y: hidden;
+    transition-duration: 0.7s;
+    transition-property: filter;
+}
+
+@media (min-width: 768px) {
+    .content--blur {
+        height: 1050px;
+        overflow: hidden;
+    }
+
+    .content {
+
+        .content__nav {
+            margin: 0 24px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .content {
+        padding-top: 14px;
+    }
+}

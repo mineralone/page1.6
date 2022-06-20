@@ -1,0 +1,43 @@
+.modal-call {
+    max-width: 360px;
+    height: 750px;
+    background-color: $colorWhite;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 
+                16px 0px 52px rgba(14, 24, 80, 0.2);
+
+    .modal-call__btn-close {
+        margin-top: 24px;
+        margin-left: 16px;
+        margin-bottom: 12px;
+    }
+}
+
+.modal-call--hide {
+    display: none;
+}
+
+.modal-call--show {
+    position: absolute;
+    top: 0;
+    right: -600px;
+    z-index: 100;
+    min-height: 100vh;
+    animation-name: display-show-modal;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@media (min-width: 768px) {
+    .modal-call {
+        max-width: 400px;
+        height: 1060px;
+
+        .modal-call__btn-close {
+            position: absolute;
+            top: 12px;
+            right: 430px;
+            background-color: rgba(0, 0, 0, 0);
+        }
+    }
+}

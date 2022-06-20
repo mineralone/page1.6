@@ -1,0 +1,129 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $borderAqua;
+    background-color: $colorWhite;
+
+    .header__communication {
+        display: none;
+    }
+
+    .header__btn-burger {
+        margin-left: 12px;
+        margin-right: 8px;
+    }
+
+    .header__btn-checkstatus {
+        margin-right: 12px;
+        margin-left: 8px;
+    }
+
+    .header__btn-repair {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .header__btn-repair::before {
+        content: url(../img/divider.svg);
+        padding-right: 18px;
+        transform: translateY(3px);
+    }
+
+}
+
+@media (min-width: 768px) {
+    .header {
+        .header__communication {
+            display: flex;
+            margin-left: auto;
+            margin-right: 0px;
+        }
+
+        .header__btn-repair {
+            margin-left: 8px;
+        }
+
+        .header__logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header__logo::before {
+            content: url(../img/divider.svg);
+            padding-right: 18px;
+            padding-left: 8px;
+            transform: translateY(3px);
+        }
+
+        .header__btn-burger {
+            margin-left: 24px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .header {
+        display: flex;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: $colorGray;
+
+        .header__communication {
+            display: none;
+    }
+
+        .header__logo {
+            display: none;
+        }
+
+        .header__btn-burger {
+            display: none;
+        }
+
+        .header__btn-checkstatus {
+            position: absolute;
+            top: 20px;
+            right: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header__btn-checkstatus::before {
+            content: 'Статус ремонта';
+            padding-right: 9px;
+            color: $textBlack;
+            font-family: $fontMedium;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            white-space: nowrap;
+        }
+
+        .header__btn-repair {
+            position: absolute;
+            right: 210px;
+            top: 20px;
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+        }
+
+        .header__btn-repair::before {
+            content: 'Оставить заявку';
+            padding-right: 9px;
+            color: $textBlack;
+            font-family: $fontMedium;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            transform: translateY(-1px);
+            white-space: nowrap;
+        }
+    
+}
+}

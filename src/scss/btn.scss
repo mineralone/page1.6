@@ -10,11 +10,34 @@
     line-height: 24px;
     letter-spacing: -0.2px;
     color: $textBlack;
-    transform: scale(1);
-    transition-property: transform;
+    transition-property: filter;
     transition-duration: 0.3s;
+
+    .btn--scale {
+        transition-property: transform;
+        transition-duration: 0.3s;
+    }
+
+    .btn__text {
+        vertical-align: center;
+    }
+
+    .btn__text:hover {
+        text-decoration: underline;
+    }
+
+    .btn__image {
+        margin-left: 6px;
+        position: relative;
+        top: 2px;
+    }
+
 }
 
 .btn:hover {
+    filter:grayscale(0.7);
+}
+
+.btn--scale:hover {
     transform: scale(1.1);
 }

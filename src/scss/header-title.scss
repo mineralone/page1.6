@@ -1,0 +1,26 @@
+.header-title {
+    
+    .header-title__text::before {
+        content: url(../img/highlight.svg);
+        padding-right: 16px;
+    }
+
+    .header-title__text {
+        display: flex;
+        align-items: center;
+        font-family: $fontBold;
+        color: $textBlack;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: -0.6px;
+    }
+
+}
+
+@media (min-width: 768px) {
+        
+        .header-title__text::before {
+            content: url(../img/highlight.svg);
+            margin-right: 8px;
+        }
+    }

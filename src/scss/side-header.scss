@@ -11,6 +11,16 @@
     .side-header__search {
         margin-left: auto;
     }
+    
+}
 
+@media (min-width: 1440px) {
+
+    .side-header {
+        .side-header__burger {
+            display: none;
+        }
+    }
+    
 }
 

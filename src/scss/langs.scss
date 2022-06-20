@@ -1,0 +1,38 @@
+.langs {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+
+    .langs__item {
+        padding-right: 8px;
+    }
+
+    .langs__btn {
+        font-family: $fontMedium;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $textBlack;
+        opacity: 1;
+        transition-property: text-decoration, opacity;
+        transition-duration: 0.15s;
+    }
+
+    .langs__btn:hover {
+        transform: none;
+        text-decoration: underline;
+        opacity: 0.7;
+    }
+
+    .langs__btn--active {
+        color: $textGray;
+    }
+
+    .langs__btn--active:hover {
+        opacity: 1;
+        text-decoration: none;
+    }
+}

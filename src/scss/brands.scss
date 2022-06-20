@@ -1,0 +1,53 @@
+.brands {
+    .brands__float-btn {
+        display: none;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .brands {
+
+        .brands__float-btn {
+            display: flex;
+            align-items: center;
+            margin-left: 24px;
+            margin-bottom: 16px;
+            text-decoration: none;
+            transition-property: text-decoration;
+            transition-property: 0.15s;
+        }
+
+        .brands__float-btn:hover {
+            text-decoration: underline;
+            transition-property: text-decoration;
+            transition-property: 0.15s;
+        }
+
+        .brands__float-btn--show::after {
+            content: 'Показать все';
+            padding-left: 8px;
+            color: $textBlack;
+            font-family: $fontMedium;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+        }
+
+        .brands__float-btn--hide {
+            transform: rotate(180deg);
+        }
+    
+        .brands__float-btn--hide::before {
+            content: 'Скрыть';
+            padding-left: 8px;
+            color: $textBlack;
+            font-family: $fontMedium;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            transform: rotate(180deg);
+        }
+
+    }
+}

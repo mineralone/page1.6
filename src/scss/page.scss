@@ -1,0 +1,32 @@
+.page {
+    overflow: hidden;
+}
+
+
+@media (min-width: 1440px) {
+    .page {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        overflow: hidden;
+        width: 100%;
+        min-height: 100%;
+        
+
+        .page__item:first-child {
+            display: flex;
+            flex-direction: column;
+            min-width: 320px;
+            background-color: $colorWhite;
+            margin-left: auto;
+        }
+
+        .page__item:nth-child(2) {
+            max-width: 1400px;
+            margin-right: auto;
+        }
+
+    }
+
+}

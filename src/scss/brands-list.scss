@@ -1,0 +1,74 @@
+.brands-list {
+    list-style: none;
+    padding-bottom: 0;
+    padding-top: 16px;
+    width: 100%;
+
+    .brands-list__item {
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $colorWhite;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .brands-list__logo {
+        padding-left: 16px;
+    }
+
+    .brands-list__button {
+        padding-right: 16px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .brands-list {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        row-gap: 16px;
+        column-gap: 12px;
+        padding-left: 24px;
+        padding-right: 24px;
+
+        .brands-list__item {
+            width: 220px;
+        }
+
+    }
+
+    .brands-list--hide {
+        height: 160px;
+        overflow: hidden;
+        animation-name: text-hide;
+        animation-fill-mode: backwards;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+    }
+
+    .brands-list--show {
+        animation-name: text-show;
+        overflow: visible;
+        animation-fill-mode: backwards;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .brands-list {
+        row-gap: 16px;
+        column-gap: 16px;
+        padding-left: 30px;
+    }
+    
+    .brands-list__item {
+        min-width: 240px;
+    }
+}

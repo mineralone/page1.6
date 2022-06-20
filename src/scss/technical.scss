@@ -1,0 +1,51 @@
+.technical {
+    .technical__float-btn {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .technical {
+        .technical__float-btn {
+            display: flex;
+            align-items: center;
+            margin-left: 24px;
+            margin-bottom: 16px;
+            text-decoration: none;
+            transition-duration: 0.15s;
+            transition-property: text-decoration;
+        }
+
+        .technical__float-btn:hover {
+            text-decoration: underline;
+            transition-duration: 0.15s;
+            transition-property: text-decoration;
+        }
+
+        .technical__float-btn--show::after {
+            content: 'Показать все';
+            padding-left: 8px;
+            color: $textBlack;
+            font-family: $fontMedium;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+        }
+
+        .technical__float-btn--hide {
+            transform: rotate(180deg);
+        }
+    
+        .technical__float-btn--hide::before {
+            content: 'Скрыть';
+            padding-left: 8px;
+            color: $textBlack;
+            font-family: $fontMedium;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            transform: rotate(180deg);
+        }
+    }
+}
+

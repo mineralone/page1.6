@@ -1,0 +1,33 @@
+.contacts {
+
+        padding-top: 8px;
+
+    .contacts__email {
+        font-family: $fontMedium;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+    }
+
+    .contacts__tel {
+        font-family: $fontBold;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        transform: translateY(-16px);
+    }
+
+    .contacts__link {
+        text-decoration: none;
+        color: $textBlack;
+        font-style: normal;
+        opacity: 1;
+        transition-property: opacity, text-decoration;
+        transition-duration: 0.15s;
+    }
+
+    .contacts__link:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+}

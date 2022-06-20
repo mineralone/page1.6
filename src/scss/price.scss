@@ -1,0 +1,37 @@
+.price {
+    padding-bottom: 50px;
+    
+    .price__text-info {
+        font-family: $fontRegular;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: $textBlack;
+        margin: 0 16px;
+        max-width: 421px;
+    }
+
+    .price__btn-commercial {
+        font-family: $fontMedium;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $textBlack;
+        margin: 0 12px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .price {
+        .price__wrapper {
+            margin: 24px;
+            margin-top: 68px;
+        }
+    
+    }
+
+}

@@ -1,0 +1,71 @@
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .modal-form__input {
+        margin: 0 16px;
+        height: 48px;
+        color: #B5B6BC;
+        font-family: $fontMedium;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        padding: 12px;
+        border: 1px solid #EAEAEA;
+        border-radius: 8px;
+        margin-bottom: 16px;
+    }
+
+    .modal-form__input:focus {
+        color: $textBlack;
+        font-family: $fontMedium;
+        box-shadow: none;
+        outline-color: #FF3E79;
+    }
+
+    .modal-form__input:last-child {
+        margin-bottom: 0px;
+    }
+    
+    .modal-form__text {
+        padding: 0 16px;
+        margin-top: 16px;
+        font-family: $fontMedium;
+        font-size: 14px;
+        line-height: 20px;
+        color: $textGray;
+    }
+
+    .modal-form__link {
+        color: #FF3E79;
+        text-decoration: none;
+        transition-duration: 0.15s;
+        opacity: 1;
+        transition-property: text-decoration, opacity;
+    }
+
+    .modal-form__link:hover {
+        text-decoration: underline;
+        opacity: 0.7;
+    }
+
+    .modal-form__button {
+        align-self: flex-end;
+        margin-top: 8px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+    }
+
+    .modal-form__input--message {
+        height: 118px;
+    }
+
+}
+
+@media (min-width:768px) {
+
+    .modal-form{
+        padding-top: 20px;
+    }
+}
