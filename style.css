@@ -350,44 +350,51 @@ template {
   .side-header .side-header__burger {
     display: none; } }
 
-.menu-side-list {
+.menu-side .menu-side__list {
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0; }
-  .menu-side-list .menu-side-list__item {
-    padding-left: 24px;
-    margin-bottom: 24px; }
-  .menu-side-list .menu-side-list__link {
-    text-decoration: none;
-    color: #1B1C21;
-    font-family: "TT Lakes Medium";
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    opacity: 1;
-    transition-property: opacity, -webkit-text-decoration;
-    transition-property: opacity, text-decoration;
-    transition-property: opacity, text-decoration, -webkit-text-decoration;
-    transition-duration: 0.15s; }
-  .menu-side-list .menu-side-list__link:hover {
-    opacity: 0.7;
-    text-decoration: underline; }
-  .menu-side-list .menu-side-list__item--active {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0; }
-  .menu-side-list .menu-side-list__item--active::before {
-    content: url(./static/highlight.svg);
-    margin-right: 20px; }
-  .menu-side-list .menu-side-list__link--active {
-    color: #7E7E82; }
-  .menu-side-list .menu-side-list__link--active:hover {
-    opacity: 1;
-    text-decoration: none; }
+
+.menu-side .menu-side__item {
+  padding-left: 24px;
+  margin-bottom: 24px; }
+
+.menu-side .menu-side__link {
+  text-decoration: none;
+  color: #1B1C21;
+  font-family: "TT Lakes Medium";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  opacity: 1;
+  transition-property: opacity, -webkit-text-decoration;
+  transition-property: opacity, text-decoration;
+  transition-property: opacity, text-decoration, -webkit-text-decoration;
+  transition-duration: 0.15s; }
+
+.menu-side .menu-side__link:hover {
+  opacity: 0.7;
+  text-decoration: underline; }
+
+.menu-side .menu-side__item--active {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0; }
+
+.menu-side .menu-side__item--active::before {
+  content: url(./static/highlight.svg);
+  margin-right: 20px; }
+
+.menu-side .menu-side__link--active {
+  color: #7E7E82; }
+
+.menu-side .menu-side__link--active:hover {
+  opacity: 1;
+  text-decoration: none; }
 
 .communication {
   list-style: none;
@@ -599,7 +606,7 @@ template {
     content: url(./static/highlight.svg);
     margin-right: 8px; } }
 
-.page-nav-list {
+.page-nav .page-nav__list {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -609,43 +616,48 @@ template {
   overflow-y: hidden;
   min-height: 60px;
   padding: 0; }
-  .page-nav-list .page-nav-list__link {
-    white-space: nowrap;
-    text-decoration: none;
-    color: #7E7E82;
-    font-family: "TT Lakes Medium";
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    padding: 16px;
-    transform: scale(1);
-    transition-duration: 0.3s;
-    transition-property: transform, -webkit-text-decoration;
-    transition-property: text-decoration, transform;
-    transition-property: text-decoration, transform, -webkit-text-decoration; }
-  .page-nav-list .page-nav-list__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px; }
-  .page-nav-list .page-nav-list__link:hover {
-    text-decoration: underline;
-    transform: scale(1.04); }
-  .page-nav-list .page-nav-list__item--active {
-    background: #FFFFFF;
-    border: 2px solid #B8FFEC;
-    border-radius: 6px; }
-  .page-nav-list .page-nav-list__link--active:hover {
-    text-decoration: none;
-    transform: none; }
+
+.page-nav .page-nav__link {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #7E7E82;
+  font-family: "TT Lakes Medium";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  padding: 16px;
+  transform: scale(1);
+  transition-duration: 0.3s;
+  transition-property: transform, -webkit-text-decoration;
+  transition-property: text-decoration, transform;
+  transition-property: text-decoration, transform, -webkit-text-decoration; }
+
+.page-nav .page-nav__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; }
+
+.page-nav .page-nav__link:hover {
+  text-decoration: underline;
+  transform: scale(1.04); }
+
+.page-nav .page-nav__item--active {
+  background: #FFFFFF;
+  border: 2px solid #B8FFEC;
+  border-radius: 6px; }
+
+.page-nav .page-nav__link--active:hover {
+  text-decoration: none;
+  transform: none; }
 
 @media (min-width: 1440px) {
-  .page-nav-list {
+  .page-nav .page-nav__list {
     flex-wrap: wrap;
     overflow: visible; }
-    .page-nav-list .page-nav-list__item {
-      margin-left: 8px;
-      margin-top: 6px; } }
+  .page-nav .page-nav__item {
+    margin-left: 8px;
+    margin-top: 6px; } }
 
 .info-read .info-read__text {
   color: #1B1C21;
@@ -728,11 +740,10 @@ template {
 
 .info-company {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: flex-start;
   align-items: flex-start; }
   .info-company .info-company__image-photo {
-    display: block;
     width: 100%;
     max-width: 600px;
     margin-bottom: 24px;
@@ -740,16 +751,22 @@ template {
 
 @media (min-width: 768px) {
   .info-company {
-    flex-direction: row;
-    justify-content: space-between; }
+    display: block;
+    width: 100%;
+    padding-bottom: 24px; }
     .info-company .info-company__image-photo {
+      border-radius: 6px;
+      float: right;
       width: 50%;
-      align-self: flex-start;
-      border-radius: 8px;
-      margin: 24px; }
+      max-width: 800px;
+      margin: 0 16px;
+      margin-bottom: 8px; }
     .info-company .info-company__text {
-      width: 50%;
       padding: 0 16px; } }
+
+@media (min-width: 1440px) {
+  .info-company .info-company__image-photo {
+    margin-bottom: 24px; } }
 
 .header-subtitle {
   width: 100%;
@@ -773,6 +790,29 @@ template {
 
 .brands .brands__float-btn {
   display: none; }
+
+.brands .brands__list {
+  list-style: none;
+  padding-bottom: 0;
+  padding-top: 16px;
+  width: 100%; }
+
+.brands .brands__item {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+.brands .brands__logo {
+  padding-left: 16px; }
+
+.brands .brands__button {
+  padding-right: 16px; }
 
 @media (min-width: 768px) {
   .brands .brands__float-btn {
@@ -809,41 +849,22 @@ template {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
-    transform: rotate(180deg); } }
-
-.brands-list {
-  list-style: none;
-  padding-bottom: 0;
-  padding-top: 16px;
-  width: 100%; }
-  .brands-list .brands-list__item {
-    height: 72px;
+    transform: rotate(180deg); }
+  .brands .brands__list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FFFFFF;
-    border: 1px solid #EAEAEA;
-    border-radius: 6px;
-    box-sizing: border-box;
-    overflow: hidden; }
-  .brands-list .brands-list__logo {
-    padding-left: 16px; }
-  .brands-list .brands-list__button {
-    padding-right: 16px; }
-
-@media (min-width: 768px) {
-  .brands-list {
-    display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     row-gap: 16px;
     -moz-column-gap: 12px;
          column-gap: 12px;
-    padding-left: 24px;
-    padding-right: 24px; }
-    .brands-list .brands-list__item {
-      width: 220px; }
-  .brands-list--hide {
+    padding: 0 24px;
+    box-sizing: border-box; }
+  .brands .brands__item {
+    flex-basis: 220px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 340px; }
+  .brands .brands__list--hide {
     height: 160px;
     overflow: hidden;
     -webkit-animation-name: text-hide;
@@ -854,7 +875,7 @@ template {
             animation-duration: 0.5s;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear; }
-  .brands-list--show {
+  .brands .brands__list--show {
     -webkit-animation-name: text-show;
             animation-name: text-show;
     overflow: visible;
@@ -866,12 +887,12 @@ template {
             animation-timing-function: linear; } }
 
 @media (min-width: 1440px) {
-  .brands-list {
+  .brands .brands__list {
     row-gap: 16px;
     -moz-column-gap: 16px;
          column-gap: 16px;
     padding-left: 30px; }
-  .brands-list__item {
+  .brands .brands__item {
     min-width: 240px; } }
 
 .swiper-pagination {
@@ -883,6 +904,34 @@ template {
 
 .technical .technical__float-btn {
   display: none; }
+
+.technical .technical__list {
+  list-style: none;
+  padding: 0;
+  padding-top: 16px; }
+
+.technical .technical__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160px;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px; }
+
+.technical .technical__text {
+  padding: 16px;
+  padding-top: 0;
+  align-self: flex-start;
+  font-family: "TT Lakes Medium";
+  color: #1B1C21;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px; }
+
+.technical .technical__btn-go {
+  padding: 16px;
+  align-self: flex-end; }
 
 @media (min-width: 768px) {
   .technical .technical__float-btn {
@@ -919,47 +968,23 @@ template {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
-    transform: rotate(180deg); } }
-
-.technical-list {
-  list-style: none;
-  padding: 0;
-  padding-top: 16px; }
-  .technical-list .technical-list__item {
+    transform: rotate(180deg); }
+  .technical .technical__list {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 160px;
-    background-color: #FFFFFF;
-    border: 1px solid #EAEAEA;
-    border-radius: 6px; }
-  .technical-list .technical-list__text {
-    padding: 16px;
-    padding-top: 0;
-    align-self: flex-start;
-    font-family: "TT Lakes Medium";
-    color: #1B1C21;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px; }
-  .technical-list .technical-list__btn-go {
-    padding: 16px;
-    align-self: flex-end; }
-
-@media (min-width: 768px) {
-  .technical-list {
-    display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
     row-gap: 16px;
     -moz-column-gap: 12px;
          column-gap: 12px;
-    padding-left: 24px;
-    padding-right: 24px; }
-    .technical-list .technical-list__item {
-      width: 220px; }
-  .technical-list--hide {
+    padding: 0 24px;
+    box-sizing: border-box; }
+  .technical .technical__item {
+    flex-basis: 220px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 340px; }
+  .technical .technical__list--hide {
     max-height: 162px;
     overflow: hidden;
     -webkit-animation-name: text-hide;
@@ -970,7 +995,7 @@ template {
             animation-duration: 0.5s;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear; }
-  .technical-list--show {
+  .technical .technical__list--show {
     -webkit-animation-name: text-show;
             animation-name: text-show;
     overflow: visible;
@@ -982,7 +1007,7 @@ template {
             animation-timing-function: linear; } }
 
 @media (min-width: 1440px) {
-  .technical-list {
+  .technical .technical__list {
     row-gap: 16px;
     -moz-column-gap: 16px;
          column-gap: 16px;
@@ -991,6 +1016,51 @@ template {
 
 .price {
   padding-bottom: 50px; }
+  .price .price__list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .price .price__item {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 200px;
+    background-color: #FFFFFF;
+    border-radius: 6px; }
+  .price .price__title {
+    padding: 0;
+    margin: 0;
+    color: #7E7E82;
+    font-family: "TT Lakes Regular";
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px; }
+  .price .price__description {
+    padding: 0;
+    margin: 0;
+    font-family: "TT Lakes Regular";
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px; }
+  .price .price__btn {
+    align-self: flex-end;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    position: relative;
+    top: -36px; }
   .price .price__text-info {
     font-family: "TT Lakes Regular";
     font-size: 14px;
@@ -1011,73 +1081,25 @@ template {
     align-items: center; }
 
 @media (min-width: 768px) {
-  .price .price__wrapper {
+  .price {
     margin: 24px;
-    margin-top: 68px; } }
-
-.price-list {
-  list-style: none;
-  padding: 0;
-  width: 100%;
-  padding-top: 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  .price-list .price-list__item {
-    display: flex;
-    flex-direction: column;
-    width: 280px;
-    height: 200px;
-    background-color: #FFFFFF;
-    border-radius: 6px; }
-  .price-list .price-list__title {
-    padding: 0;
-    margin: 0;
-    color: #7E7E82;
-    font-family: "TT Lakes Regular";
-    font-size: 14px;
-    line-height: 16px;
-    color: #7E7E82;
-    mix-blend-mode: normal;
-    opacity: 0.72;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 16px; }
-  .price-list .price-list__description {
-    padding: 0;
-    margin: 0;
-    font-family: "TT Lakes Regular";
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.2px;
-    color: #1B1C21;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 4px; }
-  .price-list .price-list__button {
-    align-self: flex-end;
-    margin-right: 16px;
-    margin-bottom: 16px;
-    position: relative;
-    top: -36px; }
-
-@media (min-width: 768px) {
-  .price-list {
-    display: flex;
-    flex-direction: column;
-    background-color: #FFFFFF;
-    border-radius: 6px;
-    overflow: visible;
-    padding-top: 0;
-    justify-content: space-between; }
-    .price-list .price-list__title {
+    margin-top: 68px; }
+    .price .price__list {
+      display: flex;
+      flex-direction: column;
+      background-color: #FFFFFF;
+      border-radius: 6px;
+      overflow: visible;
+      padding-top: 0;
+      justify-content: space-between; }
+    .price .price__title {
       display: none; }
-    .price-list .price-list__description {
+    .price .price__description {
       padding: 0;
       white-space: nowrap; }
-    .price-list .price-list__description:nth-child(1) {
+    .price .price__description:nth-child(1) {
       margin-left: 300px; }
-    .price-list .price-list__item {
+    .price .price__item {
       flex-direction: row;
       align-items: center;
       border-bottom: 1px solid #EAEAEA;
@@ -1089,14 +1111,14 @@ template {
       padding-top: 0;
       justify-content: space-between;
       position: relative; }
-    .price-list .price-list__item:last-child {
+    .price .price__item:last-child {
       border-bottom: none; }
-    .price-list .price-list__button {
+    .price .price__btn {
       align-self: center;
       position: static;
       padding: 0;
       margin: 0; }
-    .price-list .price-list__info--cost {
+    .price .price__info--cost {
       display: flex;
       text-align: left;
       margin-left: auto;
@@ -1104,14 +1126,14 @@ template {
       overflow: visible;
       align-items: flex-start;
       justify-content: flex-start; }
-    .price-list .price-list__info--time {
+    .price .price__info--time {
       display: flex;
       margin-right: 40px;
       margin-left: 40px;
       min-width: 81px;
       align-items: flex-start;
       justify-content: flex-start; }
-    .price-list .price-list__title--header {
+    .price .price__title--header {
       display: block;
       position: absolute;
       transform: translateY(-70px) translateX(-18px);
@@ -1122,9 +1144,9 @@ template {
       opacity: 0.72; } }
 
 @media (min-width: 1024px) {
-  .price-list .price-list__info--cost {
+  .price .price__info--cost {
     min-width: 80px; }
-  .price-list .price-list__info--time {
+  .price .price__info--time {
     margin-right: 100px;
     margin-left: 100px; } }
 
