@@ -3,7 +3,35 @@
         display: none;
     }
 
+    .brands__list {
+        list-style: none;
+        padding-bottom: 0;
+        padding-top: 16px;
+        width: 100%;
+    }
+    
+    .brands__item {
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $colorWhite;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .brands__logo {
+        padding-left: 16px;
+    }
+
+    .brands__button {
+        padding-right: 16px;
+    }
 }
+    
+
 
 @media (min-width: 768px) {
     .brands {
@@ -49,5 +77,57 @@
             transform: rotate(180deg);
         }
 
+        .brands__list {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            row-gap: 16px;
+            column-gap: 12px;
+            padding: 0 24px;
+            box-sizing: border-box;
+        }
+    
+        .brands__item {
+            flex-basis: 220px;
+            flex-grow: 1;
+            flex-shrink: 0;
+            max-width: 340px;
+        }
+    
+    
+        .brands__list--hide {
+            height: 160px;
+            overflow: hidden;
+            animation-name: text-hide;
+            animation-fill-mode: backwards;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+        }
+    
+        .brands__list--show {
+            animation-name: text-show;
+            overflow: visible;
+            animation-fill-mode: backwards;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+        }
     }
+
+    }
+
+
+@media (min-width: 1440px) {
+.brands {
+
+    .brands__list {
+        row-gap: 16px;
+        column-gap: 16px;
+        padding-left: 30px;
+    }
+    
+    .brands__item {
+        min-width: 240px;
+    }
+
+}
 }

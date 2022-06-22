@@ -2,6 +2,38 @@
     .technical__float-btn {
         display: none;
     }
+
+    .technical__list {
+        list-style: none;
+        padding: 0;
+        padding-top: 16px;
+    }
+    
+    .technical__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 160px;
+        background-color: $colorWhite;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+    }
+
+    .technical__text {
+        padding: 16px;
+        padding-top: 0;
+        align-self: flex-start;
+        font-family: $fontMedium;
+        color: $textBlack;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+    }
+
+    .technical__btn-go {
+        padding: 16px;
+        align-self: flex-end;
+    }
 }
 
 @media (min-width: 768px) {
@@ -46,6 +78,55 @@
             letter-spacing: -0.2px;
             transform: rotate(180deg);
         }
+
+        .technical__list {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            row-gap: 16px;
+            column-gap: 12px;
+            padding: 0 24px;
+            box-sizing: border-box;
+        
+        }
+    
+        .technical__item {
+            flex-basis: 220px;
+            flex-grow: 1;
+            flex-shrink: 0;
+            max-width: 340px;
+        }
+    
+        .technical__list--hide {
+            max-height: 162px;
+            overflow: hidden;
+            animation-name: text-hide;
+            animation-fill-mode: backwards;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+        }
+    
+        .technical__list--show {
+            animation-name: text-show;
+            overflow: visible;
+            animation-fill-mode: backwards;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+        }
     }
-}
+    }
+
+    @media (min-width: 1440px) {
+    
+        .technical {
+            .technical__list {
+                row-gap: 16px;
+                column-gap: 16px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+    }
+    }
+
 

@@ -1,7 +1,7 @@
 import Swiper from 'swiper/swiper-bundle';
 import { Pagination } from 'swiper';
 
-const brandsSwiper = new Swiper('.brands-slider', {
+const basisSwiper = {
     modules: [Pagination],
     pagination: {
         el: '.swiper-pagination',
@@ -9,14 +9,18 @@ const brandsSwiper = new Swiper('.brands-slider', {
     },
     autoHeight: false,
     direction: 'horizontal',
-    slidesPerView: 1.4,
     spaceBetween: 20,
     slidesPerGroup: 1,
     centeredSlides: false,
     watchOverflow: true,
     loop: false,
-    freeMode: true,
+    freeMode: false,
     centerInsufficientSlides: true,
+};
+
+const brandsSwiper = new Swiper('.brands', {
+    ...basisSwiper,
+    slidesPerView: 1.4,
     slidesOffsetBefore: -18,
     slidesOffsetAfter: 50,
     breakpoints: {
@@ -32,22 +36,9 @@ const brandsSwiper = new Swiper('.brands-slider', {
     }
 });
 
-const technicalSwiper = new Swiper('.technical-slider', {
-    modules: [Pagination],
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    autoHeight: false,
-    direction: 'horizontal',
+const technicalSwiper = new Swiper('.technical', {
+    ...basisSwiper,
     slidesPerView: 1.4,
-    spaceBetween: 20,
-    slidesPerGroup: 1,
-    centeredSlides: false,
-    watchOverflow: true,
-    loop: false,
-    freeMode: true,
-    centerInsufficientSlides: true,
     slidesOffsetBefore: 16,
     slidesOffsetAfter: 24,
     breakpoints: {
@@ -63,22 +54,9 @@ const technicalSwiper = new Swiper('.technical-slider', {
     }
 });
 
-const priceSwiper = new Swiper('.price-slider', {
-    modules: [Pagination],
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    autoHeight: false,
-    direction: 'horizontal',
+const priceSwiper = new Swiper('.price', {
+    ...basisSwiper,
     slidesPerView: 1.2,
-    spaceBetween: 20,
-    slidesPerGroup: 1,
-    centeredSlides: false,
-    watchOverflow: true,
-    loop: false,
-    freeMode: true,
-    centerInsufficientSlides: true,
     slidesOffsetBefore: 12,
     slidesOffsetAfter: 24,
     breakpoints: {
