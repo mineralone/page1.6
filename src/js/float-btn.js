@@ -6,45 +6,35 @@ const technicalList = document.querySelector('.technical__list');
 const technicalBtn = document.querySelector('.technical__float-btn');
 const btnArray = document.querySelectorAll('.btn');
 
-const infoReadFloatFn = function() {
-    infoReadText.classList.toggle('info-read__text--show');
-    infoReadText.classList.toggle('info-read__text--hide');
-    infoReadBtn.classList.toggle('info-read__btn--hide');
-    infoReadBtn.classList.toggle('info-read__btn--show');
-};
-
-const brandsFloatFn = function() {
-    brandsList.classList.toggle('brands__list--show');
-    brandsList.classList.toggle('brands__list--hide');
-    brandsBtn.classList.toggle('brands__float-btn--hide');
-    brandsBtn.classList.toggle('brands__float-btn--show');
-};
-
-const technicalFloatFn = function() {
-    technicalList.classList.toggle('technical__list--show');
-    technicalList.classList.toggle('technical__list--hide');
-    technicalBtn.classList.toggle('technical__float-btn--hide');
-    technicalBtn.classList.toggle('technical__float-btn--show');
+const floatFn = function(block, btnBlock, 
+                         classBlockShow, classBlockHide, 
+                         classBtnBlockShow, classBtnBlockHide) {
+    block.classList.toggle(classBlockShow);
+    block.classList.toggle(classBlockHide);
+    btnBlock.classList.toggle(classBtnBlockShow);
+    btnBlock.classList.toggle(classBtnBlockHide);
 }
 
 for (i=0; i<btnArray.length; i++) {
     btn = btnArray[i];
     if (btn.classList.contains('info-read__btn')) {
         btn.addEventListener('click', function(){
-            infoReadFloatFn();
+            floatFn(infoReadText, infoReadBtn, 
+                    'info-read__text--show', 'info-read__text--hide', 
+                    'info-read__btn--show', 'info-read__btn--hide');
         });
-    } else { 
-        if (btn.classList.contains('brands__float-btn')) {
-            btn.addEventListener('click', function(){
-                brandsFloatFn();
-            });
-        } else {
-        if (btn.classList.contains('technical__float-btn')) {
-            btn.addEventListener('click', function(){
-                technicalFloatFn();
-            });
-        };
-        };
+    } else if (btn.classList.contains('brands__float-btn')) {
+        btn.addEventListener('click', function(){
+            floatFn(brandsList, brandsBtn, 
+                    'brands__list--show', 'brands__list--hide',
+                    'brands__float-btn--show', 'brands__float-btn--hide');
+        });
+    } else if (btn.classList.contains('technical__float-btn')) {
+        btn.addEventListener('click', function(){
+            floatFn(technicalList, technicalBtn, 
+                    'technical__list--show', 'technical__list--hide',
+                    'technical__float-btn--show', 'technical__float-btn--hide');
+        });
     };
-};
+    };
 
