@@ -3,7 +3,7 @@
         display: none;
     }
 
-    .technical__list {
+    .technical__inner {
         list-style: none;
         padding: 0;
         padding-top: 16px;
@@ -79,7 +79,7 @@
             transform: rotate(180deg);
         }
 
-        .technical__list {
+        .technical__inner {
             display: flex;
             justify-content: space-evenly;
             align-items: flex-start;
@@ -98,7 +98,7 @@
             max-width: 340px;
         }
     
-        .technical__list--hide {
+        .technical__inner--hide {
             max-height: 162px;
             overflow: hidden;
             animation-name: text-hide;
@@ -107,7 +107,7 @@
             animation-timing-function: linear;
         }
     
-        .technical__list--show {
+        .technical__inner--show {
             animation-name: text-show;
             overflow: visible;
             animation-fill-mode: backwards;
@@ -120,7 +120,7 @@
     @media (min-width: 1440px) {
     
         .technical {
-            .technical__list {
+            .technical__inner {
                 row-gap: 16px;
                 column-gap: 16px;
                 padding-left: 30px;

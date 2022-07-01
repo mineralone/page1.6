@@ -1,5 +1,5 @@
 .info-read {
-    .info-read__text {
+    .info-read__inner {
         color: $textBlack;
         font-family: $fontRegular;
         font-size: 14px;
@@ -8,7 +8,7 @@
         padding: 0 16px;
     }
 
-    .info-read__text--hide {
+    .info-read__inner--hide {
         height: 110px;
         overflow: hidden;
         animation-name: text-hide;
@@ -17,7 +17,7 @@
         animation-timing-function: linear;
     }
 
-    .info-read__text--show {
+    .info-read__inner--show {
         animation-name: text-show;
         overflow: visible;
         animation-fill-mode: backwards;
@@ -25,7 +25,7 @@
         animation-timing-function: linear;
     }
 
-    .info-read__btn {
+    .info-read__float-btn {
         margin-left: 15px;
         margin-bottom: 15px;
         padding-top: 16px;
@@ -35,14 +35,14 @@
         transition-duration: 0.15s;
     }
 
-    .info-read__btn:hover {
+    .info-read__float-btn:hover {
         text-decoration: underline;
         transition-timing-function: linear;
         transition-property: text-decoration;
         transition-duration: 0.15s;
     }
 
-    .info-read__btn--show::after {
+    .info-read__float-btn--show::after {
         content: 'Читать далее';
         padding-left: 8px;
         color: $textBlack;
@@ -53,11 +53,11 @@
     
     }
 
-    .info-read__btn--hide {
+    .info-read__float-btn--hide {
         transform: rotate(180deg);
     }
 
-    .info-read__btn--hide::before {
+    .info-read__float-btn--hide::before {
         content: 'Скрыть';
         padding-left: 8px;
         color: $textBlack;
@@ -73,7 +73,7 @@
 @media (min-width: 768px) {
     .info-read {
 
-        .info-read__text--hide {
+        .info-read__inner--hide {
             height: 180px;
             overflow: hidden;
             transition-duration: 0.3s;
